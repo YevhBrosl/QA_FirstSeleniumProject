@@ -12,7 +12,7 @@ public class FirstSeleniumTest {
 
     //before-setUp
     @BeforeMethod
-    public void setUo() {
+    public void setUp() {
         driver = new ChromeDriver();
         //driver.get("https://www.google.com");
 
