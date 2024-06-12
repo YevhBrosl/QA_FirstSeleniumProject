@@ -20,7 +20,7 @@ public class Homework01 {
         System.out.println("Demo Web Shop opened!");
     }
 
-    @AfterMethod()
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }
