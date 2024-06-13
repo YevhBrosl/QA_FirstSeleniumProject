@@ -50,6 +50,22 @@ public class Homework02 {
         System.out.println(picture.getCssValue("background"));
     }
 
+    @Test
+    public void findElementByXpath() {
+        driver.findElement(By.xpath("//title"));
+        driver.findElement(By.xpath("//div[@class='header-logo']"));
+        driver.findElement(By.xpath("//img[@alt='Tricentis Demo Web Shop']"));
+        driver.findElement(By.xpath("//a[@class='ico-register']"));
+        driver.findElement(By.xpath("//li[@id='topcartlink']"));
+        driver.findElement(By.xpath("//a[@href='/cart']"));
+        driver.findElement(By.xpath("//div[@id='nivo-slider']"));
+        driver.findElement(By.xpath("//input[contains(@id, 'newsletter')]"));
+        driver.findElement(By.xpath("//strong[text()='Do you like nopCommerce?']"));
+        driver.findElement(By.xpath("//strong[.='Do you like nopCommerce?']"));
+        driver.findElement(By.xpath("//strong[contains(.,'nopCommerce?')]"));
+        driver.findElement(By.xpath("//strong[starts-with(@class,'poll')]"));
+    }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();
