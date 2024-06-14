@@ -116,6 +116,34 @@ public class FindElementsTests {
         driver.findElement(By.xpath("//input[starts-with(@class,'ng-untouched')]"));
     }
 
+    //css=div>span --> xpath=//div/span
+
+    //css=div span --> xpath=//div//span
+
+    //xpath=//input/.. -> one level up
+
+    //ancestor -> parent -> child -> descendant
+
+    @Test
+    public void findElementByXpath2() {
+        //parent
+        driver.findElement(By.xpath("//h1/parent::*"));//1 level up
+        driver.findElement(By.xpath("//h1/.."));//1 level up
+        driver.findElement(By.xpath("//h1/parent::div"));//1 level up
+
+        //ancestor
+        driver.findElement(By.xpath("//h1/ancestor::*"));// all matches
+        driver.findElement(By.xpath("//h1/ancestor::div"));// 2 matches
+        driver.findElement(By.xpath("//h1/ancestor::div[2]"));// 1 match
+
+        //following sibling
+        driver.findElement(By.xpath("//h1/following-sibling::*"));// all matches
+        driver.findElement(By.xpath("//h1/following-sibling::form"));//1 match
+
+        //preceding sibling
+        driver.findElement(By.xpath("//h2/preceding-sibling::*"));//1 match
+    }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();
