@@ -1,11 +1,10 @@
-package com.ait.tests;
+package com.demoshop.tests;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class LoginTests extends TestBase{
+public class LoginTests extends TestBase {
     @Test
     public void loginPositiveTest() {
         SoftAssert softAssert = new SoftAssert();
@@ -20,7 +19,9 @@ public class LoginTests extends TestBase{
         //assert Log Out button is present
         softAssert.assertTrue(isElementPresent(By.cssSelector(".ico-logout")));
         //assert account link is present
-        softAssert.assertTrue(isElementPresent(By.xpath("//a[.='seba@yh.com']")));
+        //softAssert.assertTrue(isElementPresent(By.xpath("//a[.='seba@yh.com']")));
+        softAssert.assertTrue(isTextPresent(By.cssSelector(".header-links-wrapper:nth-child(2)[href='/customer/info']"), "seba@yh.com"));
         softAssert.assertAll();
     }
+
 }

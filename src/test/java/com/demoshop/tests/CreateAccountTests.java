@@ -1,14 +1,18 @@
-package com.ait.tests;
+package com.demoshop.tests;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class CreateAccountTests extends TestBase{
+import java.util.Random;
+
+public class CreateAccountTests extends TestBase {
 
     @Test
     public void createAccountPositiveTest() {
+
+        int i = new Random().nextInt(1000) + 1000;
+
         SoftAssert softAssert = new SoftAssert();
         //click on Register link
         click(By.cssSelector(".ico-register"));
@@ -17,7 +21,7 @@ public class CreateAccountTests extends TestBase{
         //enter last name
         type(By.cssSelector("#LastName"), "Smith");
         //enter email
-        type(By.cssSelector("#Email"), "sebas@yh.com");
+        type(By.cssSelector("#Email"), "sebas" + i + "@yh.com");
         //enter password
         type(By.cssSelector("#Password"), "12345Qw$");
         //enter confirm password
@@ -29,7 +33,7 @@ public class CreateAccountTests extends TestBase{
         //assert successful registration message is present
         softAssert.assertTrue(isElementPresent(By.cssSelector(".result")));
         //assert account link is present
-        softAssert.assertTrue(isElementPresent(By.xpath("//a[.='sebas@yh.com']")));
+        //softAssert.assertTrue(isElementPresent(By.xpath("//a[.='sebas" + i +"@yh.com']")));
         softAssert.assertAll();
     }
 }

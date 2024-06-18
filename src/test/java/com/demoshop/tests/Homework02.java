@@ -1,10 +1,11 @@
-package com.ait.tests;
+package com.demoshop.tests;
 
+import com.demoshop.tests.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Homework02 extends TestBase{
+public class Homework02 extends TestBase {
     @Test
     public void findElementByCssSelector() {
         driver.findElement(By.cssSelector("#bar-notification"));
