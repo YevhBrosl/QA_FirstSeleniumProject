@@ -30,5 +30,6 @@ public class CreateAccountTests extends TestBase{
         softAssert.assertTrue(isElementPresent(By.cssSelector(".result")));
         //assert account link is present
         softAssert.assertTrue(isElementPresent(By.xpath("//a[.='sebas@yh.com']")));
+        softAssert.assertAll();
     }
 }
