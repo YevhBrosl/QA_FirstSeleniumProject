@@ -1,50 +1,46 @@
 package com.demoshop.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.demoshop.fw.ApplicationManager;
+import org.openqa.selenium.remote.Browser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
-import java.time.Duration;
-import java.util.List;
+import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class TestBase {
-    WebDriver driver;
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", Browser.CHROME.browserName()));
+
+    Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod
+    public void startTest(Method method, Object[] par) {
+        logger.info("Start test!" + method.getName() + " with data: " + Arrays.asList(par));
+    }
+
+    @BeforeSuite
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://demowebshop.tricentis.com");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        app.init();
     }
 
-    public boolean isElementPresent(By locator) {
-        return driver.findElements(locator).size()>0;
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
-
-    public void type(By locator, String text) {
-        click(locator);
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(text);
-    }
-
-    public void click(By locator) {
-        driver.findElement(locator).click();
-    }
-
-    public boolean isTextPresent(By locator, String text) {
-        List<WebElement> contacts = driver.findElements(locator);
-        for (WebElement el : contacts) {
-            if (el.getText().contains(text)) return true;
+    @AfterMethod(alwaysRun = true)
+    public void stopTest(ITestResult result) {
+        if (result.isSuccess()) {
+            logger.info("PASSED: " + result.getMethod().getMethodName());
+        } else {
+            logger.error("FAILED: " + result.getMethod().getMethodName() + "Screenshot: " + app.getUser().takeScreenshot());
         }
-        return false;
+        logger.info("Stop test");
+        logger.info("=================================================================================================");
+    }
+
+    @AfterSuite(enabled = true)
+    public void tearDown() {
+        app.stop();
     }
 }

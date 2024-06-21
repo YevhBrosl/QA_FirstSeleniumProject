@@ -1,7 +1,8 @@
 package com.demoshop.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.demoshop.data.ItemData;
+import com.demoshop.data.UserData;
+import com.demoshop.models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,33 +10,24 @@ import org.testng.annotations.Test;
 
 public class AddItemToCartTests extends TestBase {
 
-    @BeforeMethod
+    @BeforeMethod(enabled = false)
     public void precondition() {
-        //click on Login link
-        click(By.cssSelector(".ico-login"));
-        //enter email
-        type(By.cssSelector("#Email"), "seba@yh.com");
-        //enter password
-        type(By.cssSelector("#Password"), "12345Qw$");
-        //click on login button
-        click(By.cssSelector(".login-button"));
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillOutLoginForm(new User()
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
+        app.getUser().clickOnLoginButton();
     }
 
     @Test
     public void addToCartPositiveTest() {
-        //click on Add to cart link
-        click(By.cssSelector(".item-box:nth-child(3) .buttons"));
-        //click on shopping cart link
-        click(By.id("topcartlink"));
-        //assert product name link is present
-        Assert.assertTrue(isTextPresent(By.cssSelector(".cart-item-row .product>a"), "14.1-inch Laptop"));
+        app.getItem().clickOnAddToCartButton();
+        app.getItem().clickOnShoppingCartLink();
+        Assert.assertTrue(app.getItem().isProductNameLinkPresent(ItemData.ITEM_NAME));
     }
 
-    @AfterMethod
+    @AfterMethod(enabled = true)
     public void postCondition() {
-        //click on the remove checkbox
-        click(By.name("removefromcart"));
-        //click on the update cart button
-        click(By.name("updatecart"));
+        app.getItem().removeItemFromCart();
     }
 }

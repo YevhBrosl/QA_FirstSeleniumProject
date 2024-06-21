@@ -1,27 +1,37 @@
 package com.demoshop.tests;
 
-import org.openqa.selenium.By;
+import com.demoshop.data.UserData;
+import com.demoshop.models.User;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class LoginTests extends TestBase {
+
+    @BeforeMethod
+    public void ensurePrecondition() {
+        if (app.getUser().isAccountLinkPresentBeforeRegistration()) {
+            app.getUser().clickOnLogOutButton();
+        }
+    }
     @Test
     public void loginPositiveTest() {
         SoftAssert softAssert = new SoftAssert();
-        //click on Login link
-        click(By.cssSelector(".ico-login"));
-        //enter email
-        type(By.cssSelector("#Email"), "seba@yh.com");
-        //enter password
-        type(By.cssSelector("#Password"), "12345Qw$");
-        //click on login button
-        click(By.cssSelector(".login-button"));
-        //assert Log Out button is present
-        softAssert.assertTrue(isElementPresent(By.cssSelector(".ico-logout")));
-        //assert account link is present
-        //softAssert.assertTrue(isElementPresent(By.xpath("//a[.='seba@yh.com']")));
-        softAssert.assertTrue(isTextPresent(By.cssSelector(".header-links-wrapper:nth-child(2)[href='/customer/info']"), "seba@yh.com"));
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillOutLoginForm(new User()
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
+        app.getUser().clickOnLoginButton();
+        softAssert.assertTrue(app.getUser().isLogOutButtonPresent());
+        softAssert.assertTrue(app.getUser().isAccountLinkPresent(UserData.EMAIL));
         softAssert.assertAll();
     }
-
+    @Test
+    public void loginNegativeWithoutEmailTest() {
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillOutLoginForm(new User().setPassword(UserData.PASSWORD));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isValidationErrorMessagePresent());
+    }
 }
