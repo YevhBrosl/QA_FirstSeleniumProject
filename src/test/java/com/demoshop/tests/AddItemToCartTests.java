@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 
 public class AddItemToCartTests extends TestBase {
 
-    @BeforeMethod(enabled = false)
-    public void precondition() {
-        app.getUser().clickOnLoginLink();
-        app.getUser().fillOutLoginForm(new User()
-                .setEmail(UserData.EMAIL)
-                .setPassword(UserData.PASSWORD));
-        app.getUser().clickOnLoginButton();
-    }
+//    @BeforeMethod(enabled = false)
+//    public void precondition() {
+//        app.getUser().clickOnLoginLink();
+//        app.getUser().fillOutLoginForm(new User()
+//                .setEmail(UserData.EMAIL)
+//                .setPassword(UserData.PASSWORD));
+//        app.getUser().clickOnLoginButton();
+//    }
 
     @Test
     public void addToCartPositiveTest() {

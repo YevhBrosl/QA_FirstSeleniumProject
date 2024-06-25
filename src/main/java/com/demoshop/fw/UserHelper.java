@@ -48,16 +48,19 @@ public class UserHelper extends BaseHelper {
         click(By.cssSelector(".ico-login"));
     }
 
-
     public void clickOnLogOutButton() {
         click(By.cssSelector(".ico-logout"));
     }
 
-    public boolean isAccountLinkPresentBeforeRegistration() {
-        return isElementPresent(By.cssSelector(".header-links-wrapper:nth-child(2) [href='/customer/info']"));
-    }
-
     public boolean isValidationErrorMessagePresent() {
         return isElementPresent(By.cssSelector(".validation-summary-errors"));
+    }
+
+    public boolean isRegisterLinkPresent() {
+        return isElementPresent(By.cssSelector(".ico-register"));
+    }
+
+    public boolean isLoginLinkPresent() {
+        return isElementPresent(By.cssSelector(".ico-login"));
     }
 }

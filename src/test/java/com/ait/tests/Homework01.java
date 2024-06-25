@@ -7,21 +7,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Homework01 {
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://demowebshop.tricentis.com");
-    }
-
-    @Test
-    public void openDemoWebShop() {
-        System.out.println("Demo Web Shop opened!");
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    WebDriver driver;
+//
+//    @BeforeMethod
+//    public void setUp() {
+//        driver = new ChromeDriver();
+//        driver.get("https://demowebshop.tricentis.com");
+//    }
+//
+//    @Test
+//    public void openDemoWebShop() {
+//        System.out.println("Demo Web Shop opened!");
+//    }
+//
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }
