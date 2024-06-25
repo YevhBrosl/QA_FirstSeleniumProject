@@ -58,15 +58,9 @@ public class CreateAccountTests extends TestBase {
     }
 
     @Test(dataProvider = "addNewUserFromCsv", dataProviderClass = DataProviders.class)
-    public void createAccountPositiveTestFromDataProviderWithCsv(String firstName, String lastName, String email,
-                                                          String password, String confirmPassword) {
+    public void createAccountPositiveTestFromDataProviderWithCsv(User user) {
         app.getUser().clickOnRegisterLink();
-        app.getUser().fillOutRegistrationForm(new User()
-                .setFirstName(firstName)
-                .setLastName(lastName)
-                .setEmail(email)
-                .setPassword(password)
-                .setConfirmPassword(confirmPassword));
+        app.getUser().fillOutRegistrationForm(user);
         app.getUser().clickOnRegisterButton();
         Assert.assertTrue(app.getUser().isLogOutButtonPresent());
     }

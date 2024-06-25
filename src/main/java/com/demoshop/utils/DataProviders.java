@@ -16,9 +16,9 @@ public class DataProviders {
     @DataProvider
     public Iterator<Object[]> addNewUser() {
         List<Object[]> list = new ArrayList<>();
-        list.add(new Object[]{"Jane", "Doe", "janedoe@gm.com", "Jane$123", "Jane$123"});
-        list.add(new Object[]{"Steve", "Black", "steveblack@gm.com", "Steve$123", "Steve$123"});
-        list.add(new Object[]{"Frank", "White", "frankwhite@gm.com", "Frank$123", "Frank$123"});
+        list.add(new Object[]{"Jane", "Doe", "jane-doe@gm.com.ua", "123456", "123456"});
+        list.add(new Object[]{"Steve", "Black", "steve_black@gm.uk", "StevenBlack", "StevenBlack"});
+        list.add(new Object[]{"Frank", "White", "frankwhite79@gm.com", "frank$", "frank$"});
         return list.iterator();
     }
 
