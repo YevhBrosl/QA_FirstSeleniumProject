@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demoshop.tests.CreateAccountTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-24T14:11:32" hostname="BEST-KOMP" time="1.575">
+  <properties/>
+  <testcase name="createExistingAccountNegativeTest" classname="com.demoshop.tests.CreateAccountTests" time="1.575"/>
+  <system-out><![CDATA[16:11:32.284 [Test worker] INFO  com.demoshop.tests.TestBase -- Start test!createExistingAccountNegativeTest with data: []
+16:11:32.287 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find elements --> By.cssSelector: .ico-register
+16:11:32.318 [Test worker] INFO  com.demoshop.utils.MyListener -- After find elements --> By.cssSelector: .ico-register
+16:11:32.318 [Test worker] INFO  com.demoshop.utils.MyListener -- List size is 1
+16:11:32.320 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: .ico-register
+16:11:32.343 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: .ico-register
+16:11:32.737 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #FirstName
+16:11:32.758 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #FirstName
+16:11:32.796 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #FirstName
+16:11:32.812 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #FirstName
+16:11:32.839 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #FirstName
+16:11:32.854 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #FirstName
+16:11:32.888 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #LastName
+16:11:32.906 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #LastName
+16:11:32.943 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #LastName
+16:11:32.960 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #LastName
+16:11:32.984 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #LastName
+16:11:32.999 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #LastName
+16:11:33.026 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Email
+16:11:33.045 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Email
+16:11:33.077 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Email
+16:11:33.092 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Email
+16:11:33.111 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Email
+16:11:33.125 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Email
+16:11:33.151 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:33.168 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:33.200 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:33.212 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:33.233 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:33.246 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:33.274 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #ConfirmPassword
+16:11:33.288 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #ConfirmPassword
+16:11:33.319 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #ConfirmPassword
+16:11:33.331 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #ConfirmPassword
+16:11:33.351 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #ConfirmPassword
+16:11:33.363 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #ConfirmPassword
+16:11:33.388 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #register-button
+16:11:33.402 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #register-button
+16:11:33.875 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find elements --> By.cssSelector: .validation-summary-errors
+16:11:33.892 [Test worker] INFO  com.demoshop.utils.MyListener -- After find elements --> By.cssSelector: .validation-summary-errors
+16:11:33.892 [Test worker] INFO  com.demoshop.utils.MyListener -- List size is 1
+16:11:33.896 [Test worker] INFO  com.demoshop.tests.TestBase -- PASSED: createExistingAccountNegativeTest
+16:11:33.896 [Test worker] INFO  com.demoshop.tests.TestBase -- Stop test
+16:11:33.896 [Test worker] INFO  com.demoshop.tests.TestBase -- =================================================================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demoshop.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-24T14:11:33" hostname="BEST-KOMP" time="0.709">
+  <properties/>
+  <testcase name="loginNegativeWithoutEmailTest" classname="com.demoshop.tests.LoginTests" time="0.709"/>
+  <system-out><![CDATA[16:11:33.899 [Test worker] INFO  com.demoshop.tests.TestBase -- Start test!loginNegativeWithoutEmailTest with data: []
+16:11:33.899 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find elements --> By.cssSelector: .ico-login
+16:11:33.916 [Test worker] INFO  com.demoshop.utils.MyListener -- After find elements --> By.cssSelector: .ico-login
+16:11:33.916 [Test worker] INFO  com.demoshop.utils.MyListener -- List size is 1
+16:11:33.916 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: .ico-login
+16:11:33.932 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: .ico-login
+16:11:34.220 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:34.234 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:34.269 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:34.280 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:34.301 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: #Password
+16:11:34.313 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: #Password
+16:11:34.339 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find element --> By.cssSelector: .login-button
+16:11:34.356 [Test worker] INFO  com.demoshop.utils.MyListener -- After find element --> By.cssSelector: .login-button
+16:11:34.611 [Test worker] INFO  com.demoshop.utils.MyListener -- Before find elements --> By.cssSelector: .validation-summary-errors
+16:11:34.624 [Test worker] INFO  com.demoshop.utils.MyListener -- After find elements --> By.cssSelector: .validation-summary-errors
+16:11:34.625 [Test worker] INFO  com.demoshop.utils.MyListener -- List size is 1
+16:11:34.626 [Test worker] INFO  com.demoshop.tests.TestBase -- PASSED: loginNegativeWithoutEmailTest
+16:11:34.626 [Test worker] INFO  com.demoshop.tests.TestBase -- Stop test
+16:11:34.626 [Test worker] INFO  com.demoshop.tests.TestBase -- =================================================================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
