@@ -3,6 +3,7 @@ package com.demoshop.tests;
 import com.demoshop.data.UserData;
 import com.demoshop.models.User;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,5 +34,12 @@ public class LoginTests extends TestBase {
         app.getUser().fillOutLoginForm(new User().setPassword(UserData.PASSWORD));
         app.getUser().clickOnLoginButton();
         Assert.assertTrue(app.getUser().isValidationErrorMessagePresent());
+    }
+
+    @AfterMethod
+    public void postCondition() {
+        if (!app.getUser().isLoginLinkPresent()) {
+            app.getUser().clickOnLogOutButton();
+        }
     }
 }
