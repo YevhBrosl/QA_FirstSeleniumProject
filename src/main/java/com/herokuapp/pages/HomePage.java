@@ -15,4 +15,18 @@ public class HomePage extends BasePage{
         click(javaScriptAlerts);
         return this;
     }
+
+    @FindBy(css="#content>ul>li:nth-child(34)>a")
+    WebElement nestedFrames;
+    public HomePage getNestedFrames() {
+        click(nestedFrames);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(33)>a")
+    WebElement multipleWindows;
+    public HomePage getMultipleWindows() {
+        click(multipleWindows);
+        return this;
+    }
 }
