@@ -13,8 +13,15 @@ public class HoverTests extends TestBase1{
     }
 
     @Test
-    public void viewProfileAfterHoveringTest() {
-        new HoverPage(driver).hoverOverAvatar(0).verifyName("user1")
-                .viewProfile().verifyProfile("Not Found");
+    public void hoverTest() {
+        new HoverPage(driver).hoverOverAvatar(0)
+                .verifyName("user1");
+
+    }
+
+    @Test
+    public void viewProfileTest() {
+        new HoverPage(driver).hoverOverAvatar(0).viewProfile()
+                .verifyProfile("Not Found");
     }
 }
