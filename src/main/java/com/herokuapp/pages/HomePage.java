@@ -29,4 +29,18 @@ public class HomePage extends BasePage{
         click(multipleWindows);
         return this;
     }
+
+    @FindBy(css="#content>ul>li:nth-child(24)>a")
+    WebElement horizontalSlider;
+    public HomePage getHorizontalSlider() {
+        click(horizontalSlider);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(25)>a")
+    WebElement hovers;
+    public HomePage getHovers() {
+        click(hovers);
+        return this;
+    }
 }
