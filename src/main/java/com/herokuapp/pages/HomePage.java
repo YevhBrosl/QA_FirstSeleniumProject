@@ -43,4 +43,27 @@ public class HomePage extends BasePage{
         click(hovers);
         return this;
     }
+
+    @FindBy(css="#content>ul>li:nth-child(7)>a")
+    WebElement contextMenu;
+    public HomePage getContextMenu() {
+        click(contextMenu);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(10)>a")
+    WebElement dragAndDrop;
+
+    public HomePage getDragAndDrop() {
+        click(dragAndDrop);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(11)>a")
+    WebElement dropdown;
+
+    public HomePage getDropdown() {
+        click(dropdown);
+        return this;
+    }
 }
