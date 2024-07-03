@@ -66,4 +66,36 @@ public class HomePage extends BasePage{
         click(dropdown);
         return this;
     }
+
+    @FindBy(css="#content>ul>li:nth-child(18)>a")
+    WebElement fileUpload;
+
+    public HomePage getFileUpload() {
+        click(fileUpload);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(28)>a")
+    WebElement jQueryUIMenus;
+
+    public HomePage getJQueryUIMenus() {
+        click(jQueryUIMenus);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(16)>a")
+    WebElement exitIntent;
+
+    public HomePage getExitIntent() {
+        click(exitIntent);
+        return this;
+    }
+
+    @FindBy(css="#content>ul>li:nth-child(4)>a")
+    WebElement brokenImages;
+
+    public HomePage getBrokenImages() {
+        click(brokenImages);
+        return this;
+    }
 }
