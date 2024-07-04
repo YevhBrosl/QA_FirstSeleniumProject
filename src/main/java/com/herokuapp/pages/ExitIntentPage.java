@@ -46,16 +46,16 @@ public class ExitIntentPage extends BasePage{
 //        return this;
 //    }
 
-//    public ExitIntentPage verifyReturnToExitIntentPage(String pageUrl) {
-//        try {
-//            String url = (String) js.executeScript("return document.URL;");
-//            System.out.println("Current URL: " + url);
-//            Assert.assertEquals(url, pageUrl, "The current URL does not match the expected URL.");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            Assert.fail("Failed to retrieve the current URL.");
-//        }
-//        return this;
-//    }
+    public ExitIntentPage verifyReturnToExitIntentPage(String pageUrl) {
+        try {
+            String url = (String) js.executeScript("return document.URL;");
+            System.out.println("Current URL: " + url);
+            Assert.assertEquals(url, pageUrl, "The current URL does not match the expected URL.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assert.fail("Failed to retrieve the current URL.");
+        }
+        return this;
+    }
 
 }

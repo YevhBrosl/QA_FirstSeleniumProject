@@ -98,4 +98,12 @@ public class HomePage extends BasePage{
         click(brokenImages);
         return this;
     }
+
+    @FindBy(css="#content>ul>li:nth-child(2)>a")
+    WebElement addRemoveElements;
+
+    public HomePage getAddRemoveElements() {
+        click(addRemoveElements);
+        return this;
+    }
 }
