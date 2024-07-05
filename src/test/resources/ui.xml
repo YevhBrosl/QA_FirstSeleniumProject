@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="UITests" verbose="1">
+    <test name="UITest">
+        <classes>
+            <class name="com.herokuapp.tests.AddRemoveElementsTest">
+            </class>
+            <class name="com.herokuapp.tests.FileUploadTests">
+            </class>
+            <class name="com.herokuapp.tests.HorizontalSliderTest">
+            </class>
+            <class name="com.herokuapp.tests.HoverTests">
+            </class>
+            <class name="com.herokuapp.tests.JQueryUIMenusTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>
