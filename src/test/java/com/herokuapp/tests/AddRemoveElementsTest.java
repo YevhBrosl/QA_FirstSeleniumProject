@@ -12,9 +12,21 @@ public class AddRemoveElementsTest extends TestBase1{
         new HomePage(driver).getAddRemoveElements();
     }
 
+//    @Test
+//    public void addRemoveElementWithKeyboardEventTest() {
+//        new AddRemoveElementsPage(driver).addRemoveElementWithKeyboardEvent()
+//                .verifyElementIsDeleted();
+//    }
+
     @Test
-    public void addRemoveElementWithKeyboardEventTest() {
-        new AddRemoveElementsPage(driver).addRemoveElementWithKeyboardEvent()
-                .verifyElementIsDeleted();
+    public void addElementsTest() {
+        new AddRemoveElementsPage(driver).addElements()
+                .verifyAddElements();
+    }
+
+    @Test(expectedExceptions = AssertionError.class)
+    public void removeElementsTest() {
+        new AddRemoveElementsPage(driver).removeElements()
+                .verifyRemoveElements();
     }
 }

@@ -9,49 +9,49 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    @FindBy(css="#content>ul>li:nth-child(29)>a")
+    @FindBy(css="li:nth-child(29)>a")
     WebElement javaScriptAlerts;
     public HomePage getJavaScriptAlerts() {
         click(javaScriptAlerts);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(34)>a")
+    @FindBy(css="li:nth-child(34)>a")
     WebElement nestedFrames;
     public HomePage getNestedFrames() {
         click(nestedFrames);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(33)>a")
+    @FindBy(css="li:nth-child(33)>a")
     WebElement multipleWindows;
     public HomePage getMultipleWindows() {
         click(multipleWindows);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(24)>a")
+    @FindBy(css="li:nth-child(24)>a")
     WebElement horizontalSlider;
     public HomePage getHorizontalSlider() {
         click(horizontalSlider);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(25)>a")
+    @FindBy(css="li:nth-child(25)>a")
     WebElement hovers;
     public HomePage getHovers() {
         click(hovers);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(7)>a")
+    @FindBy(css="li:nth-child(7)>a")
     WebElement contextMenu;
     public HomePage getContextMenu() {
         click(contextMenu);
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(10)>a")
+    @FindBy(css="li:nth-child(10)>a")
     WebElement dragAndDrop;
 
     public HomePage getDragAndDrop() {
@@ -59,7 +59,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(11)>a")
+    @FindBy(css="li:nth-child(11)>a")
     WebElement dropdown;
 
     public HomePage getDropdown() {
@@ -67,7 +67,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(18)>a")
+    @FindBy(css="li:nth-child(18)>a")
     WebElement fileUpload;
 
     public HomePage getFileUpload() {
@@ -75,7 +75,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(28)>a")
+    @FindBy(css="li:nth-child(28)>a")
     WebElement jQueryUIMenus;
 
     public HomePage getJQueryUIMenus() {
@@ -83,7 +83,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(16)>a")
+    @FindBy(css="li:nth-child(16)>a")
     WebElement exitIntent;
 
     public HomePage getExitIntent() {
@@ -91,7 +91,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(4)>a")
+    @FindBy(css="li:nth-child(4)>a")
     WebElement brokenImages;
 
     public HomePage getBrokenImages() {
@@ -99,7 +99,7 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    @FindBy(css="#content>ul>li:nth-child(2)>a")
+    @FindBy(css="li:nth-child(2)>a")
     WebElement addRemoveElements;
 
     public HomePage getAddRemoveElements() {

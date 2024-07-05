@@ -14,7 +14,8 @@ public class BrokenImagesTest extends TestBase1{
 
     @Test
     public void checkBrokenImagesTest() {
-        new BrokenImagesPage(driver).checkBrokenImages();
+        new BrokenImagesPage(driver).defineLinksOfImages()
+                .checkBrokenImages();
     }
 
 }

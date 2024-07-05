@@ -14,7 +14,7 @@ public class ExitIntentTest extends TestBase1{
 
     @Test
     public void exitViewportTest() {
-        new ExitIntentPage(driver).exitViewport();
-                //.verifyReturnToExitIntentPage("https://the-internet.herokuapp.com/exit_intent");
+        new ExitIntentPage(driver).exitViewport()
+                .verifyCloseButtonIsNotVisible();
     }
 }

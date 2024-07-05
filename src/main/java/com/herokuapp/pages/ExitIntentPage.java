@@ -1,12 +1,16 @@
 package com.herokuapp.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.awt.*;
+import java.time.Duration;
 
 public class ExitIntentPage extends BasePage{
     public ExitIntentPage(WebDriver driver) {
@@ -39,23 +43,26 @@ public class ExitIntentPage extends BasePage{
 
 
 
-//    public ExitIntentPage verifyReturnToExitIntentPage(String pageUrl) {
+    public ExitIntentPage verifyCloseButtonIsNotVisible() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        boolean isElementInvisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[.='Close']")));
+        Assert.assertTrue(isElementInvisible);
 //        String url = js.executeScript("return document.URL;").toString();
 //        System.out.println(url);
-////        Assert.assertEquals(url, pageUrl);
-//        return this;
-//    }
-
-    public ExitIntentPage verifyReturnToExitIntentPage(String pageUrl) {
-        try {
-            String url = (String) js.executeScript("return document.URL;");
-            System.out.println("Current URL: " + url);
-            Assert.assertEquals(url, pageUrl, "The current URL does not match the expected URL.");
-        } catch (Exception e) {
-            e.printStackTrace();
-            Assert.fail("Failed to retrieve the current URL.");
-        }
+//        Assert.assertEquals(url, pageUrl);
         return this;
     }
+
+//    public ExitIntentPage verifyReturnToExitIntentPage(String pageUrl) {
+//        try {
+//            String url = (String) js.executeScript("return document.URL;");
+//            System.out.println("Current URL: " + url);
+//            Assert.assertEquals(url, pageUrl, "The current URL does not match the expected URL.");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            Assert.fail("Failed to retrieve the current URL.");
+//        }
+//        return this;
+//    }
 
 }
