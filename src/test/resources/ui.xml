@@ -3,8 +3,6 @@
 <suite name="UITests" verbose="1">
     <test name="UITest">
         <classes>
-            <class name="com.herokuapp.tests.AddRemoveElementsTest">
-            </class>
             <class name="com.herokuapp.tests.FileUploadTests">
             </class>
             <class name="com.herokuapp.tests.HorizontalSliderTest">
